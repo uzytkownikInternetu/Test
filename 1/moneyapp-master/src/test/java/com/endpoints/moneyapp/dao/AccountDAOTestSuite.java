@@ -41,7 +41,7 @@ public class AccountDAOTestSuite {
     @Test
     public void testGetAllAccounts() throws CustomException {
         AccountDAO accountDAO = getAccountDAO();
-        accountDAO.createAccount("Andrzej", new BigDecimal("1000"), "USD");
+        accountDAO.createAccount("", new BigDecimal(""), "USD");
         accountDAO.createAccount("Tom", new BigDecimal("850"), "USD");
         List<Account> accounts = accountDAO.getAllAccounts();
         assertThat(2, equalTo(accounts.size()));
